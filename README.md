@@ -1,3 +1,13 @@
+## Enhancio Assignment
+
+In this project, we have taken an use-case of listing popular users by repositries, filtered by city and sorted by starts.
+
+This excercise is mainly to demonstrate, coding and best practices react application development.
+
+This includes:
+
+React, redux, thunk and styledComponents. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
