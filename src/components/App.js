@@ -18,12 +18,12 @@ class App extends React.Component {
 
     render() {
 
-        const { users } = this.props
+      const { users } = this.props
 
    
-        let usersList = [];
+      let usersList = [];
 
-        for(let i =0; i<users.length;i++) {
+      for(let i =0; i<users.length;i++) {
         usersList.push(<UserProfile key={i} user={users[i]} />)
       }
 
