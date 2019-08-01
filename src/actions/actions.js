@@ -1,9 +1,9 @@
 // Action creator
-const getUsersSuccess = (users) => {
+const getFieldsSuccess = (fields) => {
   return {
-    type: 'LOAD_USERS_SUCCESS',
-    users
+    type: 'LOAD_FIELDS_SUCCESS',
+    fields
   }
 }
 
-export default getUsersSuccess;
+export default getFieldsSuccess;

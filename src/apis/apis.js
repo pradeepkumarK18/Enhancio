@@ -1,8 +1,8 @@
-const gitHubApi = () => {
-  return fetch(`https://api.github.com/search/users?q=location%3Abangalore&sort=stars&&per_page=10`)
+const fieldsApi = () => {
+  return fetch(`http://54.193.89.54:8230/readFields`)
     .then(response => {
       return response.json().then( data => {
-      	return data.items;
+      	return data;
       })
     })
     .catch(error => {
@@ -10,4 +10,4 @@ const gitHubApi = () => {
     })
 };
 
-export default gitHubApi;
+export default fieldsApi;

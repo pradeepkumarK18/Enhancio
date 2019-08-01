@@ -2,19 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect, Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-import fetchUsers from './thunk/thunks';
+import fetchFields from './thunk/thunks';
 import ReduxThunk from 'redux-thunk';
-import usersReducer from './reducers/reducers';
+import fieldsReducer from './reducers/reducers';
+import removeField from './actions/removeaction';
 import App from './components/App';
 
 // Setup store
-const store = createStore(usersReducer, applyMiddleware(ReduxThunk));
+const store = createStore(fieldsReducer, applyMiddleware(ReduxThunk));
 
 // Wrap action creator with dispatch method
-const mapStateToProps = (state) =>  ({ users: state }); 
+const mapStateToProps = (state) =>  ({ fields: state }); 
 
 // wrap action creator with dispatch method
-const mapDispatchToProps = (dispatch) => ({ fetchUsers: () => dispatch(fetchUsers()) })  
+const mapDispatchToProps = (dispatch) => ({ fetchFields: () => dispatch(fetchFields()), removeField: (id) => dispatch(removeField(id)) })  
 
 // Connect react component to redux store 
 const AppPage = connect(mapStateToProps, mapDispatchToProps)(App);

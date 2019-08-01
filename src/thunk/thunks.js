@@ -1,11 +1,11 @@
-import gitHubApi from '../apis/apis';
-import getUsersSuccess from '../actions/actions';
+import fieldsApi from '../apis/apis';
+import getFieldsSuccess from '../actions/actions';
 
-const fetchUsers = () => {
+const fetchFields = () => {
   return dispatch => {
-   return gitHubApi()
-      .then(users => {
-        dispatch(getUsersSuccess(users))
+   return fieldsApi()
+      .then(fields => {
+        dispatch(getFieldsSuccess(fields))
       })
       .catch(error => {
         throw error
@@ -13,4 +13,4 @@ const fetchUsers = () => {
   }
 }
 
-export default fetchUsers;
+export default fetchFields;
